@@ -20,7 +20,7 @@ output:
      before_body: doc_prefix.html
      after_body: doc_suffix.html
    css: presentation.css
-   pandoc_args: ["--output=index.html"] 
+   # pandoc_args: ["--output=index.html"] 
 # bibliography: ./library.bib  
 ---
 
@@ -166,6 +166,62 @@ Input to one ear
 </center>
 
 - The initial site of ITD processing is considered to be the MSO.
+
+
+## Interaural-phase Modulation Following Response (IPM-FR)
+
+Objective measures of binaural processing can be obtained by using stimuli where the temporal fine structure is manipulated so that the perceived location of the sound image changes periodically (e.g. 6.7 Hz) over time. 
+
+<center>
+<img src="./my_figures/example.png" width="40%">
+</center>
+
+<center>
+(Undurraga et al. 2016)
+</center>
+
+</li>
+
+##  Interaural-phase modulation (Humans)
+
+- The size of the interaural phase difference (relative ITD with respect to the frequency of the sound) will determine the lateralization of the sound.
+
+<br>
+
+||||
+|-|-|-|
+|<video width="320" height="240" controls source src="./my_figures/example-90.0_90.0.mp4" type="video/mp4">| <video width="320" height="240" controls source src="./my_figures/example-45.0_45.0.mp4" type="video/mp4">|<video width="320" height="240" controls source src="./my_figures/example-22.5_22.5.mp4" type="video/mp4">|
+
+## Behavioural vs. Objective measures (Humans)
+
+
+<ul class="fragment" data-fragment-index="3">
+<img src="./my_figures/spectral-magnitude-thr-ipd-ave.svg" width="100%">
+</ul>
+
+<li class="fragment" data-fragment-index="4">
+The correlation between objective and behavioural measurements is excellent (r = 0.96)
+</li>
+
+## The effect of age and hearing loss in objective binaural measures
+
+<center>
+<img src="./my_figures/vercommen_ipm-fr.png" width="30%">
+<img src="./my_figures/vercammena_ipm_fr_data.png" width="50%">
+</center>
+
+<center>
+Vercammen et al. (2018)
+</center>
+
+<li class="fragment" data-fragment-index="0">
+Binaural processing of low frequency sounds is significantly deteriorated by age and hearing status.
+</li>
+
+<li class="fragment" data-fragment-index="1">
+A larger IPM-FR dynamic range was associated with lower (better) IPD discrimination.
+</li>
+
 
 ## Aims
 
@@ -342,9 +398,7 @@ Participant's were grouped according **maximum binaural DP asymmetry   across al
 - Good correlations at subject level: ** 17 (AMP, SNR) - 18 GFP significant correlations **
 
 
-# Conclusions
-
-##
+## Conclusions
 
 - Digits in noise showed reliable and stable SRT (standard deviation across trials was below to 3 dB, and training effects < 1 dB).
 
