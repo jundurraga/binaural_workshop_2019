@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content=" Jaime A. Undurraga, Jeremie Lienart, David McAlpine" />
+  <meta name="dcterms.date" content="2019-11-11" />
+  <title>Binaural processing in the human brain and its relation to speech understanding.</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="presentation_files/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+
+<link rel="stylesheet" href="presentation_files/reveal.js-3.3.0.1/css/theme/white.css" id="theme">
+
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+
+
+    .reveal table {
+      border-width: 1px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 1px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+    <link rel="stylesheet" href="presentation.css"/>
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}  
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+    
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+    
+    <link href="presentation_files/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+    <link href="presentation_files/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+    <h1 class="title">Binaural processing in the human brain and its relation to speech understanding.</h1>
+    <h2 class="author"><font size="5"> Jaime A. Undurraga, Jeremie Lienart, David McAlpine </font></h2>
+    <h3 class="date"><font size="5">2019-11-11 </font></h3>
+</section>
+
+<section><section id="introduction" class="title-slide slide level1"><h1>Introduction</h1></section><section id="cocktail-party-problem-cherry-1953" class="slide level2">
+<h2>Cocktail-party problem (Cherry, 1953)</h2>
+<p>How do we recognize what one person is saying when others are speaking at the same time?</p>
+<p>When everyone at a well-attended party talks at the same level, the speech of the attended talker at a distance of 0.7 m has a signal-to-noise ratio (SNR) of about 0 dB (the background is as intense as the target talker Plomp 1977). This level is sufficient to give adequate intelligibility for listeners with normal hearing (Miller, 1947).</p>
+<center>
+<img data-src="./my_figures/cocktail_party_effect.png" style="width:35.0%" />
+</center>
+</section><section id="section" class="slide level2">
+<h2></h2>
+<ul>
+<li><p>It is well established that hearing capabilities decline with ageing and/or following noise exposure <font size="3">(Vercammen et al. 2018).</font></p></li>
+<li>Normal hearing (NH) listeners report great difficulties in understanding speech, particularly, in environments with background noise despite having <strong>normal audiometric thresholds</strong> <font size="3">(Füllgrabe, Moore, and Stone 2015)</font></li>
+<li>Animal studies have shown that noise exposure can lead to 40 - 50 % of loss of AN synapses - <strong>Synaptopathy</strong> <font size="3">(e.g. Kujawa and Liberman, 2015, 2009; Liberman and Kujawa, 2014). </font></li>
+<li>Histological data seems to confirm this effect in “Normal Hearing” human cochleas <font size="3">(Viana et al., 2015).</font></li>
+<li>Synaptopathy affect all types of AN fibers: high-SR / low- and medium-SR fibers ratio of about 1:3 <font size="3">(Marmel et al. 2015).</font></li>
+<li><p>Noise exposure may reduce the number of synapses but also induce <strong>transient loss of cochlear Schwann cells resulting in permanent auditory temporal deficits</strong> <font size="3">(Wan and Corfas 2017)</font></p></li>
+</ul>
+<center>
+<img data-src="./my_figures/an_schawnn_cell.png" style="width:8.0%" />
+</center>
+</section><section id="section-1" class="slide level2">
+<h2></h2>
+<p>Low freuqnecy cues are particulalry sensitive to time.</p>
+<center>
+<img data-src="./my_figures/Bernstein_and_Trahiotis_2016.png" style="width:40.0%" />
+</center>
+<center>
+<font size="3">Bernstein and Trahiotis (2016)</font>
+</center>
+</section><section id="binaural-cues" class="slide level2">
+<h2>Binaural cues</h2>
+<p>When listening to sounds, we rely on three mechanisms for both sound localization and auditory scene analysis</p>
+<li class="fragment" data-fragment-index="0">
+Interaural level differences (ILDs)
+</li>
+<li class="fragment" data-fragment-index="1">
+Interaural time differences (ITDs)
+</li>
+<li class="fragment" data-fragment-index="2">
+Interaural coherence
+</li>
+</section><section id="itds-and-ilds" class="slide level2">
+<h2>ITDs and ILDs</h2>
+<center>
+<img data-src="./my_figures/itd_ild_cartoon.png" style="width:60.0%" />
+</center>
+</section></section>
+<section><section id="binaural-processing-and-speech-understanding" class="title-slide slide level1"><h1>Binaural processing and speech understanding</h1></section><section id="binaural-redundancy" class="slide level2">
+<h2>Binaural Redundancy</h2>
+<ul>
+<li><p>Loudness doubles when the two ears are used instead of one ear for a sound coming from the front of the listener (a single ear would require an increase of about 10 dB; Fletcher and Munson, 1933)</p></li>
+<li><p>Just noticeable differences in intensity and frequency improve with signal redundancy</p></li>
+<li><p>Speech recognition in the presence of background noise improves (Marrone 2008, Neher 2009)</p></li>
+<li><p>Hearing impairment may lead to a slightly weaker binaural benefit in patients (Dillon, 2001)</p></li>
+<li><p>Binaural stimulation sounds can be louder than with a monaural presentation without causing discomfort (even true for CI-treated patient)</p></li>
+</ul>
+</section><section id="binaural-release-from-masking-or-binaural-squelch-or-hirsh-effect" class="slide level2">
+<h2>Binaural Release from Masking (or Binaural Squelch; or Hirsh effect)</h2>
+<p><img class="fragment" data-fragment-index="0" src="./my_figures/bmld_cartoon_n0s0.png" width="45%" data-audio-src="./audio/convolved/sinusoidal_arctic_a0002_d_type_noise_target_0_d1_0_d2_0_snr_-10.wav" data-audio-advance=-1 data-audio-advance=-1 > <img class="fragment" data-fragment-index="1" src="./my_figures/bmld_cartoon_n0spi.png" width="45%" data-audio-src="./audio/convolved/sinusoidal_arctic_a0002_d_type_noise_target_0_d1_90_d2_-90_snr_-10.wav" data-audio-advance=-1 data-audio-advance=-1></p>
+<li class="fragment" data-fragment-index="2">
+Binaural release from masking may improve detection threshold up to about 16 dB for frequencies around 250 Hz and around 3 dB at 1500 Hz
+</li>
+</section><section id="spatial-release-from-masking" class="slide level2">
+<h2>Spatial Release from Masking</h2>
+<center>
+<img class="fragment" data-fragment-index="0" src="./my_figures/bmld_cartoon_srm_front.png" width="40%" data-audio-src="./audio/convolved/convolved_arctic_a0002_d_type_speech_target_0_d1_0_d2_0_snr_0.wav" data-audio-advance=-1 data-audio-advance=-1 > <img class="fragment" data-fragment-index="1" src="./my_figures/bmld_cartoon_srm.png" width="40%" data-audio-src="./audio/convolved/convolved_arctic_a0002_d_type_speech_target_0_d1_-80_d2_80_snr_0.wav" data-audio-advance=-1 data-audio-advance=-1>
+</center>
+<li class="fragment" data-fragment-index="2">
+Binaural release from masking may improve detection thresholds up to 12 dB for multiple speech interferers (Jones and Litovsky, 2011), and facilitates source segregation provided that streaming can build up and natural onset cues are present (Drennan, Gatehouse, and Lever, 2003).
+</li>
+<li class="fragment" data-fragment-index="3">
+Segregation is always better for the combination of both ITDs and ILDs cues (Culling, Hawley, and Litovsky 2004)
+</li>
+<li class="fragment" data-fragment-index="4">
+A separation of only 10° between two voices is already strong enough to allow segregation (Brungart and Simpson, 2007).
+</li>
+<li class="fragment" data-fragment-index="5">
+ITD is a critical spatial cue for sound localization and speech perception in noise (Bronkhorst &amp; Plomp, 1988; Wightman &amp; Kistler, 1992).
+</li>
+</section></section>
+<section><section id="auditory-pathway" class="title-slide slide level1"><h1>Auditory Pathway</h1></section><section id="section-2" class="slide level2">
+<h2></h2>
+<center>
+Input to one ear
+</center>
+<center>
+<img data-src="./my_figures/spectrogram_cheap.png" style="width:45.0%" />
+</center>
+<center>
+<img data-src="./my_figures/rater.png" style="width:45.0%" />
+</center>
+</section><section id="auditory-pathway-1" class="slide level2">
+<h2>Auditory pathway</h2>
+<center>
+<img data-src="./my_figures/auitorypath.png" style="width:45.0%" />
+</center>
+</section><section id="itd-pathway" class="slide level2">
+<h2>ITD pathway</h2>
+<center>
+<img data-src="./my_figures/itd_pathway.svg" style="width:80.0%" />
+</center>
+<center>
+(Grothe et al. 2010)
+</center>
+<ul>
+<li>The initial site of ITD processing is considered to be the MSO.</li>
+</ul>
+</section><section id="aims" class="slide level2">
+<h2>Aims</h2>
+<ul>
+<li>To investigate the relation between neural coding of temporal processing using objective (Electroencephalogram (EEG)) and behavioural (speech-in-noise listening) binaural measures in NH listeners.</li>
+</ul>
+</section></section>
+<section><section id="methods" class="title-slide slide level1"><h1>Methods</h1></section><section id="preliminary-subjects-assessment" class="slide level2">
+<h2>Preliminary Subjects Assessment</h2>
+<ul>
+<li>23 Participants took part in this study</li>
+</ul>
+<p><strong>All participant underwent:</strong></p>
+<ul>
+<li>otoscopy (to ensure integrity of external ear and tympanic membrane)</li>
+<li>pure tone audiometry (hearing threshold between 250 Hz – 8 kHz)</li>
+<li>immittance test with acoustics reflex (to ensure integrity of middle ear and lower brainstem pathways)</li>
+<li>distortion product otoacoustic emissions between 500 Hz – 10 kHz (DPOAEs, to assess outer hair cell functioning)</li>
+</ul>
+</section><section id="behavioural-measures" class="slide level2">
+<h2>Behavioural Measures</h2>
+<p><strong>Digits in noise test</strong></p>
+<ul>
+<li>Adaptive staircase procedure (2-down/1-up) with variable adaptive step (Leek, 2001; Denys et al. 2019)</li>
+<li>Three randomly chosen digits were presented in background speech-shaped noise.
+<center>
+<img data-src="my_figures/noise.png" style="width:40.0%" />
+</center></li>
+</ul>
+</section><section id="section-3" class="slide level2">
+<h2></h2>
+<ul>
+<li>Initial step size: 6 dB first two reversals; 3 dB next two reversals, and 2 dB last six reversals.</li>
+<li>Noise was presented diotically (i.e. identical signal in both ears) at 65 dB SPL.</li>
+<li>Ditits were presented using several <strong>ITDs: 0, 0.1, 0.2, 0.4, 0.8 ms</strong>. In addition, digits were also presented having the opposite polarity in both ears - <strong>antiphasic</strong>.</li>
+<li>3 runs were obtained per ITD (starting SNR at 10 dB and -30 dB).</li>
+<li>All were presented in random order.</li>
+</ul>
+</section><section id="eeg-recordings" class="slide level2">
+<h2>EEG recordings</h2>
+<ul>
+<li>Amplitude modulated (80 Hz) bandpass noise (100 - 1000 Hz) at 65 dB SPL.</li>
+<li>Interaural time modulations (ITM) presented at a rate of 6.7 Hz</li>
+<li>ITM consisted of: 0/0 (diotic), 0/0.1 ms, 0/0.2 ms, 0/0.4 ms, 0/0.8 ms, and antiphasic condition.</li>
+</ul>
+<center>
+<img data-src="my_figures/stimuli.png" style="width:80.0%" />
+</center>
+</section><section id="section-4" class="slide level2">
+<h2></h2>
+<ul>
+<li>EEG: 64 channels Biosemi system, fs: 16384 Hz.</li>
+</ul>
+<center>
+<img data-src="my_figures/eeg_setting.png" style="width:80.0%" />
+</center>
+</section><section id="eeg-processing" class="slide level2">
+<h2>EEG processing</h2>
+<p>All data was processed with <strong>“pyeeg-python”</strong> (Python 3.7)</p>
+<ul>
+<li>data referenced to Cz and down-sampled to 1024 samples per second</li>
+<li>poor electrode were automatically detected and removed</li>
+<li>eye blink artifacts were removed using a template matching suppression method <font size="3">(Valderrama et al., 2018)</font></li>
+<li>data filtered using a Kaiser filter (−65 dB ripple and 1 Hz transition between pass and stop band)</li>
+<li>epochs were sorted and de-noised using spatial filtering <font size="3">(de Cheveigné and Simon, 2008)</font></li>
+<li>epochs averaged using a weighted averaging method <font size="3"> (Don and Elberling, 1994) </font></li>
+<li>frequency response (FFT of 4255 points at 0.24 Hz resolution) and tested using Hotelling’s T-squared test <font size="3"> Picton et al. (1987) and Picton et al. (2003)</font></li>
+</ul>
+</section></section>
+<section><section id="results" class="title-slide slide level1"><h1>Results</h1></section><section id="screening" class="slide level2">
+<h2>Screening</h2>
+<center>
+<img data-src="my_figures/audiogram_individuals.png" style="width:45.0%" /> <img data-src="my_figures/dpgram.png" style="width:45.0%" />
+</center>
+</section><section id="speech-reception-thresholds" class="slide level2">
+<h2>Speech reception thresholds</h2>
+<center>
+<img data-src="my_figures/srt_hearing_group.png" style="width:50.0%" />
+</center>
+<ul>
+<li>No effect of presentation was no significant (F(5, 352.6) = 1.7, p = 0.14)</li>
+<li>Trial number had a significant effect (difference &lt; <strong>0.88 dB</strong>) (F(2,370.4) = 22.5, p &lt; 0.001)</li>
+<li>SRT improvement ranged between 4.1 and 8.8 dB</li>
+</ul>
+</section><section id="fishing-p-values-the-only-thing-i-can-go-fishing-as-a-vegerarian" class="slide level2">
+<h2>Fishing p-values (the only thing I can go fishing as a vegerarian!)</h2>
+<center>
+<img data-src="my_figures/gonefishing1.png" data-with="100" />
+</center>
+</section><section id="srt-vs-pta-hg1-20-hg2" class="slide level2">
+<h2>SRT vs PTA HG1 &lt; 20 &lt;= HG2</h2>
+<p>Participant’s were grouped according to SRTs and PTA: HG1 &lt; 20 &lt;= HG2</p>
+<center>
+<img data-src="my_figures/srt_itd_anova.png" style="width:40.0%" /> <img data-src="my_figures/srt_slope_hg_20dB.png" style="width:40.0%" />
+</center>
+<ul>
+<li>SRTs differences between HG1 and HG2 did not differ</li>
+</ul>
+</section><section id="srt-vs-pta-low-frequency" class="slide level2">
+<h2>SRT vs PTA low frequency</h2>
+<p>Participant’s were grouped according <strong>maximum PTA for frequencies &lt;= 1 kHz and splitted by median</strong></p>
+<center>
+<img data-src="my_figures/srt_pta_low_freq.png" style="width:40.0%" /> <img data-src="my_figures/srt_slope_pta_low_freq.png" style="width:40.0%" />
+</center>
+<ul>
+<li>HG had a small (0.6 dB) but significant effect (F(1,21) = 4.4271, p = 0.0476).</li>
+<li>Applying the same criteria interaural asymmetry was not significant (p = 0.08).</li>
+<li>Applying the same criteria for frequencies &gt; 1 kHz did not show any significant effect.</li>
+</ul>
+</section><section id="srt-vs-dp-low-frequency" class="slide level2">
+<h2>SRT vs DP low frequency</h2>
+Participant’s were grouped according <strong>minimum DP for frequencies &lt;= 1 kHz and splitted by median</strong>
+<center>
+<img data-src="my_figures/srt_dp_low_freq.png" style="width:45.0%" /> <img data-src="my_figures/srt_slope_dp_low_freq.png" style="width:45.0%" />
+</center>
+<ul>
+<li>HG had a small (0.6 dB) but significant effect (F(1, 21) = 5.1397, p = 0.034)</li>
+</ul>
+</section><section id="srt-vs-dp-whole-frequency-range" class="slide level2">
+<h2>SRT vs DP whole frequency range</h2>
+<p>Participant’s were grouped according <strong>maximum binaural DP asymmetry across all and splitted by median</strong></p>
+<center>
+<img data-src="my_figures/srt_slope_pta_diff_high_freq.png" style="width:45.0%" />
+</center>
+<ul>
+<li>DP interaural asymmetry was significant (p = 0.016).</li>
+</ul>
+</section><section id="eeg-responses" class="slide level2">
+<h2>EEG responses</h2>
+<center>
+<img data-src="my_figures/itd-fr-time-freq.png" style="width:50.0%" /> <img data-src="my_figures/itd-fr-topographic_map.png" style="width:15.0%" /> <img data-src="my_figures/itd-assr-topographic_map.png" style="width:15.0%" />
+</center>
+</section><section id="section-5" class="slide level2">
+<h2></h2>
+<center>
+<img data-src="my_figures/ITDFR_ITD_amp_dB.png" style="width:45.0%" /> <img data-src="my_figures/ASSR_amp_dB.png" style="width:45.0%" />
+</center>
+<ul>
+<li>ITD-FR significantly affected by itd (F(5, 110) = 43.5, p &lt;&lt; 0.001)</li>
+<li>ASSR showed no significant effects (F(5, 110) = 1.92, p = 0.09)</li>
+</ul>
+</section><section id="srt-vs-eeg" class="slide level2">
+<h2>SRT vs EEG</h2>
+<center>
+<img data-src="my_figures/corr_amp_digits.png" style="width:45.0%" /> <img data-src="my_figures/corr_gfp_digits.png" style="width:45.0%" />
+</center>
+<ul>
+<li>Best ITM-FR amplitude, SNR or global field power correlate significantly with SRT.</li>
+</ul>
+</section><section id="section-6" class="slide level2">
+<h2></h2>
+<center>
+<img data-src="my_figures/corr_mean_amp_digits.png" style="width:45.0%" /> <img data-src="my_figures/corr_mean_gfp_digits.png" style="width:45.0%" />
+</center>
+<ul>
+<li>Excellent correlation at group level (-0.43 * ITD-FR Amp dB)</li>
+<li>Good correlations at subject level: ** 17 (AMP, SNR) - 18 GFP significant correlations **</li>
+</ul>
+</section></section>
+<section id="conclusions" class="title-slide slide level1"><h1>Conclusions</h1></section>
+    </div>
+  </div>
+
+  <script src="presentation_files/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="presentation_files/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display a presentation progress bar
+        progress: true,
+        // Display the page number of the current slide
+        slideNumber: true,
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: false,
+        // Opens links in an iframe preview overlay
+        previewLinks: true,
+        // Transition style
+        transition: 'fade', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+
+
+
+        chalkboard: {
+          toggleNotesButton: true,
+        },
+
+        keyboard: {
+          67: function() { RevealChalkboard.toggleNotesCanvas() },    // toggle notes canvas when 'c' is pressed
+          66: function() { RevealChalkboard.toggleChalkboard() }, // toggle chalkboard when 'b' is pressed
+          46: function() { RevealChalkboard.clear() },    // clear chalkboard when 'DEL' is pressed
+           8: function() { RevealChalkboard.reset() },    // reset chalkboard data on current slide when 'BACKSPACE' is pressed
+          68: function() { RevealChalkboard.download() }, // downlad recorded chalkboard drawing when 'd' is pressed
+        },
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'presentation_files/reveal.js-3.3.0.1/plugin/notes/notes.js', async: true },
+          { src: 'presentation_files/reveal.js-3.3.0.1/plugin/zoom-js/zoom.js', async: true },
+          { src: 'presentation_files/reveal.js-3.3.0.1/plugin/chalkboard/chalkboard.js', async: true },
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {  
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+<script>
+ Reveal.initialize({
+    // Optional reveal.js plugins
+    dependencies: [
+        { src: './reveal.js-plugins-master/audio-slideshow/slideshow-recorder.js', condition: function( ) { return !!document.body.classList; } },	
+		{ src: './reveal.js-plugins-master/audio-slideshow/audio-slideshow.js', condition: function( ) { return !!document.body.classList; } },
+    ], 
+    audio: {
+		prefix: 'audio/', 	// audio files are stored in the "audio" folder
+		suffix: '.wav',		// audio files have the ".ogg" ending
+		textToSpeechURL: null,  // the URL to the text to speech converter
+		defaultNotes: false, 	// use slide notes as default for the text to speech converter
+		defaultText: false, 	// use slide text as default for the text to speech converter
+		advance: 0, 		// advance to next slide after given time in milliseconds after audio has played, use negative value to not advance 
+		autoplay: false,	// automatically start slideshow
+		defaultDuration: 5,	// default duration in seconds if no audio is available 
+		playerOpacity: 0.05,	// opacity value of audio player if unfocused
+		playerStyle: 'position: fixed; bottom: 4px; left: 25%; width: 50%; height:75px; z-index: 33;', // style used for container of audio controls 
+		startAtFragment: false, // when moving to a slide, start at the current fragment or at the start of the slide
+	},
+});
+</script>
+
+  </body>
+</html>
