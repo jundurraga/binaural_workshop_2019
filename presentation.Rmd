@@ -344,9 +344,14 @@ Participant's were grouped according **maximum binaural DP asymmetry   across al
 
 # Conclusions
 
+##
+
 - Digits in noise showed reliable and stable SRT (standard deviation across trials was below to 3 dB, and training effects < 1 dB).
+
 - We observed a relatively broad SRT range across participants (4.1 and 8.8 dB) and where within the range observed by other authors.
+
 - Although preliminary, grouping participants based on low frequency PTA and DP seemed to partially explain some of the varican in the SRT scores.
+
 - EEG responses showed great sensitivity to ITDs and had an excellent correlation with SRTs (across several different metrics) across and withing participants.
 
 
