@@ -56,8 +56,9 @@ This level is sufficient to give adequate intelligibility for listeners with nor
 </center>
 
 ## 
-
+<center>
 Low frequency cues are particularly sensitive to time.
+</center>
 
 <center>
 ![](./my_figures/Bernstein_and_Trahiotis_2016.png){width="40%"}
@@ -309,12 +310,14 @@ All data was processed with **"pyeeg-python"** (Python 3.7)
 
 ## Speech reception thresholds
 <center>
-![](my_figures/srt_hearing_group.png){width=50%}
+![](my_figures/srt_hearing_group.png){width=45%}
+![](my_figures/sd_all_subjects_boxplot.png){width=45%}
 </center>
 
 - No effect of presentation was no significant (F(5, 352.6) = 1.7, p = 0.14)
 - Trial number had a significant effect (difference < **0.88 dB**) (F(2,370.4) = 22.5, p < 0.001)
 - SRT improvement ranged between 4.1 and 8.8 dB
+- SRT standard deviation increased with ITD (F(5, 105) =  3.7317, p = 0.004). Mean SD: 0.7 (0 ITD) to 1.47 dB (Antiphasic).
 
 
 
@@ -419,7 +422,7 @@ Participants were grouped according **maximum binaural DP asymmetry   across all
 
 - We observed a relatively broad SRT range across participants (4.1 and 8.8 dB) and where within the range observed by other authors.
 
-- Although preliminary, grouping participants based on low frequency PTA and DP seemed to partially explain some of the variance in the SRT scores.
+- Although preliminary, grouping participants based on low frequency PTA and DP seemed to partially explain some of the variance in the SRT scores **(0.6 dB)**, however, remember the **SRT variance:  0.7 (0 ITD) to 1.47 dB (Antiphasic).**
 
 - **EEG responses showed great sensitivity to ITDs** and had an excellent correlation with SRTs (across several different metrics) across and withing participants.
 
