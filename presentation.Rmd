@@ -20,7 +20,7 @@ output:
      before_body: doc_prefix.html
      after_body: doc_suffix.html
    css: presentation.css
-   pandoc_args: ["--output=index.html"] 
+   pandoc_args: ["--output=index.html"]
 # bibliography: ./library.bib  
 ---
 
@@ -57,7 +57,7 @@ This level is sufficient to give adequate intelligibility for listeners with nor
 
 ## 
 
-Low freuqnecy cues are particulalry sensitive to time.
+Low frequency cues are particularly sensitive to time.
 
 <center>
 ![](./my_figures/Bernstein_and_Trahiotis_2016.png){width="40%"}
@@ -108,27 +108,26 @@ When listening to sounds, we rely on three mechanisms for both sound localizatio
 <li class="fragment" data-fragment-index="2"> Binaural release from masking may improve detection threshold up to about 16 dB for frequencies around 250 Hz and around 3 dB at 1500 Hz </li>
 
 ## Spatial Release from Masking  
-<center>
 
-<img class="fragment" data-fragment-index="0" src="./my_figures/bmld_cartoon_srm_front.png" width="40%" data-audio-src="./audio/convolved/convolved_arctic_a0002_d_type_speech_target_0_d1_0_d2_0_snr_0.wav" data-audio-advance=-1 data-audio-advance=-1 >
-<img class="fragment" data-fragment-index="1" src="./my_figures/bmld_cartoon_srm.png" width="40%" data-audio-src="./audio/convolved/convolved_arctic_a0002_d_type_speech_target_0_d1_-80_d2_80_snr_0.wav" data-audio-advance=-1 data-audio-advance=-1>
+<center>
+<img class="fragment" data-fragment-index="0" src="./my_figures/bmld_cartoon_srm_front.png" width="35%" data-audio-src="./audio/convolved/convolved_arctic_a0002_d_type_speech_target_0_d1_0_d2_0_snr_0.wav" data-audio-advance=-1 data-audio-advance=-1 >
+<img class="fragment" data-fragment-index="1" src="./my_figures/bmld_cartoon_srm.png" width="35%" data-audio-src="./audio/convolved/convolved_arctic_a0002_d_type_speech_target_0_d1_-80_d2_80_snr_0.wav" data-audio-advance=-1 data-audio-advance=-1>
 </center>
 
 <li class="fragment" data-fragment-index="2"> 
-Binaural release from masking may improve detection thresholds up to 12 dB for multiple speech interferers (Jones and Litovsky, 2011), and facilitates source segregation provided that streaming can build up and natural onset cues are present (Drennan, Gatehouse, and Lever, 2003).
+Binaural release from masking may improve detection thresholds up to 12 dB for multiple speech interferers <font size="3">(Jones and Litovsky, 2011)</font>, and facilitates source segregation provided that streaming can build up and natural onset cues are present <font size="3">(Drennan, Gatehouse, and Lever, 2003).</font>
 </li>
 
 <li class="fragment" data-fragment-index="3"> 
-Segregation is always better for the combination of both ITDs and ILDs cues (Culling, Hawley, and Litovsky 2004)
+Segregation is always better for the combination of both ITDs and ILDs cues <font size="3">(Culling, Hawley, and Litovsky 2004)</font>
 </li>
 
 <li class="fragment" data-fragment-index="4"> 
-A separation of only 10° between two voices is already strong enough to allow segregation  (Brungart and Simpson, 2007).
+A separation of only 10° between two voices is already strong enough to allow segregation  <font size="3">(Brungart and Simpson, 2007).</font>
 </li>
 
-
-<li class="fragment" data-fragment-index="5"> ITD is a critical spatial cue for sound localization and speech perception in noise (Bronkhorst &
-Plomp, 1988; Wightman & Kistler, 1992).
+<li class="fragment" data-fragment-index="5"> ITD is a critical spatial cue for sound localization and speech perception in noise <font size="3">(Bronkhorst &
+Plomp, 1988; Wightman & Kistler, 1992).</font>
 </li>
 
 
@@ -173,73 +172,70 @@ Input to one ear
 Objective measures of binaural processing can be obtained by using stimuli where the temporal fine structure is manipulated so that the perceived location of the sound image changes periodically (e.g. 6.7 Hz) over time. 
 
 <center>
-<img src="./my_figures/example.png" width="40%">
+![](./my_figures/example.png){width="40%"}
+<video width="320" height="240" controls source src="./my_figures/example-90.0_90.0.mp4" type="video/mp4">
 </center>
 
 <center>
 (Undurraga et al. 2016)
 </center>
 
-</li>
+<!-- ##  Interaural-phase modulation (Humans) -->
 
-##  Interaural-phase modulation (Humans)
+<!-- - The size of the interaural phase difference (relative ITD with respect to the frequency of the sound) will determine the lateralization of the sound. -->
 
-- The size of the interaural phase difference (relative ITD with respect to the frequency of the sound) will determine the lateralization of the sound.
+<!-- <br> -->
 
-<br>
-
-||||
-|-|-|-|
-|<video width="320" height="240" controls source src="./my_figures/example-90.0_90.0.mp4" type="video/mp4">| <video width="320" height="240" controls source src="./my_figures/example-45.0_45.0.mp4" type="video/mp4">|<video width="320" height="240" controls source src="./my_figures/example-22.5_22.5.mp4" type="video/mp4">|
+<!-- |||| -->
+<!-- |-|-|-| -->
+<!-- |<video width="320" height="240" controls source src="./my_figures/example-90.0_90.0.mp4" type="video/mp4">| <video width="320" height="240" controls source src="./my_figures/example-45.0_45.0.mp4" type="video/mp4">|<video width="320" height="240" controls source src="./my_figures/example-22.5_22.5.mp4" type="video/mp4">| -->
 
 ## Behavioural vs. Objective measures (Humans)
 
+<center>
+![](./my_figures/spectral-magnitude-thr-ipd-ave.svg){width="100%"}
+</center>
+<center>
+(Undurraga et al. 2016)
+</center>
 
-<ul class="fragment" data-fragment-index="3">
-<img src="./my_figures/spectral-magnitude-thr-ipd-ave.svg" width="100%">
-</ul>
-
-<li class="fragment" data-fragment-index="4">
-The correlation between objective and behavioural measurements is excellent (r = 0.96)
-</li>
+- The correlation between objective and behavioural measurements is excellent (r = 0.96)
 
 ## The effect of age and hearing loss in objective binaural measures
 
 <center>
-<img src="./my_figures/vercommen_ipm-fr.png" width="30%">
-<img src="./my_figures/vercammena_ipm_fr_data.png" width="50%">
+![](./my_figures/vercommen_ipm-fr.png){width="30%"}
+![](./my_figures/vercammena_ipm_fr_data.png){width="60%"}
 </center>
 
 <center>
 Vercammen et al. (2018)
 </center>
 
-<li class="fragment" data-fragment-index="0">
-Binaural processing of low frequency sounds is significantly deteriorated by age and hearing status.
-</li>
+- Binaural processing of low frequency sounds is significantly deteriorated by age and hearing status.
 
-<li class="fragment" data-fragment-index="1">
-A larger IPM-FR dynamic range was associated with lower (better) IPD discrimination.
-</li>
+- A larger IPM-FR dynamic range was associated with lower (better) IPD discrimination.
 
 
 ## Aims
 
+**Does binaural brain response relate to speech-in-noise?**
+
 - To investigate the relation between neural coding of temporal processing using objective (Electroencephalogram (EEG)) and behavioural (speech-in-noise listening) binaural measures in NH listeners.
 
-# Methods
 
+# Methods
 
 ## Preliminary Subjects Assessment
 
 - 23 Participants took part in this study 
 
-**All participant underwent:**
+**All participants undergone:**
 
-- otoscopy (to ensure integrity of external ear and tympanic membrane)
-- pure tone audiometry (hearing threshold between 250 Hz – 8 kHz) 
-- immittance test with acoustics reflex (to ensure integrity of middle ear and lower brainstem pathways)
-- distortion product otoacoustic emissions between 500 Hz – 10 kHz (DPOAEs, to assess outer hair cell functioning)
+- Otoscopy (to ensure integrity of external ear and tympanic membrane)
+- Pure tone audiometry (hearing threshold between 250 Hz – 8 kHz) 
+- Immittance test with acoustics reflex (to ensure integrity of middle ear and lower brainstem pathways)
+- Distortion product otoacoustic emissions between 500 Hz – 10 kHz (DPOAEs, to assess outer hair cell functioning)
 
 
 ## Behavioural Measures
@@ -247,17 +243,21 @@ A larger IPM-FR dynamic range was associated with lower (better) IPD discriminat
 **Digits in noise test**
 
 - Adaptive staircase procedure (2-down/1-up) with variable adaptive step (Leek, 2001; Denys et al. 2019)
-- Three randomly chosen digits were presented in background speech-shaped noise. 
+- Three randomly chosen digits were presented in background speech shaped noise. 
 <center>
-![](my_figures/noise.png){width="40%"}
+![](my_figures/noise.png){width="60%"}
 </center>
 
 ##
 
 - Initial step size: 6 dB first two reversals; 3 dB next two reversals, and 2 dB last six reversals.
+
 - Noise was presented diotically (i.e. identical signal in both ears) at 65 dB SPL. 
-- Ditits were presented using several **ITDs: 0, 0.1, 0.2, 0.4, 0.8 ms**. In addition, digits were also presented having the opposite polarity in both ears - **antiphasic**.
+
+- Digits were presented using several **ITDs: 0, 0.1, 0.2, 0.4, 0.8 ms**. In addition, digits were also presented having the opposite polarity in both ears - **antiphasic**.
+
 - 3 runs were obtained per ITD (starting SNR at 10 dB and -30 dB).
+
 - All were presented in random order.
 
 
@@ -284,13 +284,19 @@ A larger IPM-FR dynamic range was associated with lower (better) IPD discriminat
 
 All data was processed with **"pyeeg-python"** (Python 3.7)
 
-- data referenced to Cz and  down-sampled to 1024 samples per second
-- poor electrode were automatically detected and removed
-- eye blink artifacts were removed using a template matching suppression method <font size="3">(Valderrama et al., 2018)</font>
-- data filtered using a Kaiser filter (−65 dB ripple and 1 Hz transition between pass and stop band)
-- epochs were sorted and de-noised using spatial filtering <font size="3">(de Cheveigné and Simon, 2008)</font>
-- epochs averaged using a weighted averaging method <font size="3"> (Don and Elberling, 1994) </font>
-- frequency response (FFT of 4255 points at 0.24 Hz resolution) and tested using Hotelling’s T-squared test <font size="3"> Picton et al. (1987) and Picton et al. (2003)</font>
+- Data referenced to Cz and  down-sampled to 1024 samples per second
+
+- Poor electrode were automatically detected and removed
+
+- Eye blink artifacts were removed using a template matching suppression method <font size="3">(Valderrama et al., 2018)</font>
+
+- Data filtered using a FIR Kaiser filter (−65 dB ripple and 1 Hz transition between pass and stop band)
+
+- Epochs were sorted and de-noised using spatial filtering <font size="3">(de Cheveigné and Simon, 2008)</font>
+
+- Epochs averaged using a weighted averaging method <font size="3"> (Don and Elberling, 1994) </font>
+
+- Frequency response (FFT of 4255 points at 0.24 Hz resolution) and tested using Hotelling’s T-squared test <font size="3"> Picton et al. (1987) and Picton et al. (2003)</font>
 
 
 # Results
@@ -317,9 +323,9 @@ All data was processed with **"pyeeg-python"** (Python 3.7)
 ![](my_figures/gonefishing1.png){with="100"}
 </center>
 
-## SRT vs PTA HG1 < 20 <= HG2
+## SRT vs PTA hearing group (HG): 1 < 20 <= 2
 
-Participant's were grouped according to SRTs and PTA: HG1 < 20 <= HG2
+Participants were grouped according to SRTs and PTA - HG: 1 < 20 <= 2
 
 <center>
 ![](my_figures/srt_itd_anova.png){width="40%"}
@@ -330,7 +336,7 @@ Participant's were grouped according to SRTs and PTA: HG1 < 20 <= HG2
 
 ## SRT vs PTA low frequency
 
-Participant's were grouped according **maximum PTA for frequencies <= 1 kHz and splitted by median**
+Participants were grouped according **maximum PTA for frequencies <= 1 kHz and splitted by median**
 
 <center>
 ![](my_figures/srt_pta_low_freq.png){width="40%"}
@@ -343,7 +349,7 @@ Participant's were grouped according **maximum PTA for frequencies <= 1 kHz and 
 
 ## SRT vs DP low frequency
 
-Participant's were grouped according **minimum DP for frequencies <= 1 kHz and splitted by median**
+Participants were grouped according **minimum DP for frequencies <= 1 kHz and splitted by median**
 <center>
 ![](my_figures/srt_dp_low_freq.png){width="45%"}
 ![](my_figures/srt_slope_dp_low_freq.png){width="45%"}
@@ -352,13 +358,13 @@ Participant's were grouped according **minimum DP for frequencies <= 1 kHz and s
 - HG had a small (0.6 dB) but significant effect (F(1, 21) = 5.1397, p = 0.034)
 
 ## SRT vs DP whole frequency range
-Participant's were grouped according **maximum binaural DP asymmetry   across all and splitted by median**
+Participants were grouped according **maximum binaural DP asymmetry   across all and splitted by median**
 
 <center>
 ![](my_figures/srt_slope_pta_diff_high_freq.png){width="45%"}
 </center>
 
-- DP interaural asymmetry was significant (p = 0.016).
+- DP interaural asymmetry grouping show a significant different (p = 0.016).
 
 ## EEG responses
 
@@ -375,7 +381,7 @@ Participant's were grouped according **maximum binaural DP asymmetry   across al
 ![](my_figures/ASSR_amp_dB.png){width="45%"}
 </center>
 
-- ITD-FR significantly affected by itd (F(5, 110) = 43.5, p << 0.001)
+- ITD-FR significantly affected by ITDs (F(5, 110) = 43.5, p << 0.001)
 - ASSR showed no significant effects (F(5, 110) = 1.92, p = 0.09)
 
 ## SRT vs EEG
@@ -395,7 +401,7 @@ Participant's were grouped according **maximum binaural DP asymmetry   across al
 </center>
 
 - Excellent correlation at group level (-0.43 * ITD-FR Amp dB)
-- Good correlations at subject level: ** 17 (AMP, SNR) - 18 GFP significant correlations **
+- Good correlations at subject level: **17 (AMP, SNR) - 18 GFP significant correlations**
 
 
 ## Conclusions
@@ -404,8 +410,12 @@ Participant's were grouped according **maximum binaural DP asymmetry   across al
 
 - We observed a relatively broad SRT range across participants (4.1 and 8.8 dB) and where within the range observed by other authors.
 
-- Although preliminary, grouping participants based on low frequency PTA and DP seemed to partially explain some of the varican in the SRT scores.
+- Although preliminary, grouping participants based on low frequency PTA and DP seemed to partially explain some of the variance in the SRT scores.
 
-- EEG responses showed great sensitivity to ITDs and had an excellent correlation with SRTs (across several different metrics) across and withing participants.
+- **EEG responses showed great sensitivity to ITDs** and had an excellent correlation with SRTs (across several different metrics) across and withing participants.
 
+**Future work**
 
+- Obtain predictions from a binaural model combined with several degrees of Synaptopathy / temporal jitter. 
+
+- Repeat experiments with listeners reporting speech-in-noise issues. 
