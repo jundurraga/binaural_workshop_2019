@@ -98,7 +98,7 @@ When listening to sounds, we rely on three mechanisms for both sound localizatio
 
 - Hearing impairment may lead to a slightly weaker binaural benefit in patients  (Dillon, 2001)
 
-- Binaural stimulation sounds can be louder than with a monaural presentation without causing discomfort (even true for CI-treated patient)
+- Sounds presented binaurally can be louder than with a monaural presentation without causing discomfort (even true for CI-treated patient)
 
 ## Binaural Release from Masking (or Binaural Squelch; or Hirsh effect)
 
@@ -373,6 +373,15 @@ Participants were grouped according **maximum binaural DP asymmetry   across all
 ![](my_figures/itd-fr-topographic_map.png){width="15%"}
 ![](my_figures/itd-assr-topographic_map.png){width="15%"}
 </center>
+
+## EEG vs stimulus bandwidth 
+
+<center>
+![](my_figures/anova_ITDFR_BWMF_amp.png){width="45%"}
+![](my_figures/anova_ASSR_BWMF_amptransformed.png){width="45%"}
+</center>
+
+- ITM-FR no affected by stimulus bandwidth, suggesting that response is mostly elicited by energy below 1 kHz.
 
 ##
 
